@@ -2,4 +2,4 @@ FROM heroiclabs/nakama:latest
 
 COPY ./build /nakama/data/modules
 
-CMD nakama --database.address "$DATABASE_ADDRESS"
+CMD ["sh", "-c", "nakama --database.address \"$DATABASE_ADDRESS\""]
